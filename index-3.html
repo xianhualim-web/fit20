@@ -317,59 +317,59 @@ const STORE_KEY = 'fit15_state_v1';
 const SET_KEY = 'fit15_settings_v1';
 const AUTO_BACKUP_KEY = 'fit15_backup_auto';
 
-/* 固定任务与主任务（沿用原有常量） */
+/* ---------- 15天训练计划数据（含可点击 YouTube 视频直链） ---------- */
 const FIX_TASKS = [
-  { id:'itb',   name:'泡沫轴/手拳滚压大腿外侧 (ITB松解)', desc:'左右各 2 分钟，消除假胯宽与外侧凸出', link: 'https://www.bilibili.com/video/BV1g44y1Y744' },
-  { id:'clam',  name:'蚌式展开 (激活臀中肌)', desc:'左右各 3 组 × 20 次，收紧假胯', link: 'https://www.youtube.com/watch?v=8V7i12w2SW8' },
-  { id:'side',  name:'侧卧抬腿 (收紧大腿内侧)', desc:'左右各 3 组 × 20 次，改善弯腿视觉', link: 'https://www.youtube.com/watch?v=U3Fm3x_1v60' },
-  { id:'frog',  name:'青蛙趴 / 青蛙拉伸', desc:'持续 3 分钟，改善骨盆前倾与腿型', link: 'https://www.bilibili.com/video/BV1aZ4y1Z7vN' },
+  { id:'itb',   name:'泡沫轴/手拳滚压大腿外侧 (ITB松解)', desc:'左右各 2 分钟，消除假胯宽与外侧凸出', link: 'https://www.youtube.com/watch?v=4f28vsjBF14' },
+  { id:'clam',  name:'蚌式展开 (激活臀中肌)', desc:'左右各 3 组 × 20 次，收紧假胯', link: 'https://www.youtube.com/watch?v=-CWPIgK4G-k' },
+  { id:'side',  name:'侧卧抬腿 (收紧大腿内侧)', desc:'左右各 3 组 × 20 次，改善弯腿视觉', link: 'https://www.youtube.com/watch?v=4f28vsjBF14' },
+  { id:'frog',  name:'青蛙趴 / 青蛙拉伸', desc:'持续 3 分钟，改善骨盆前倾与腿型', link: 'https://www.youtube.com/watch?v=Z5X5VZbP2dc' },
 ];
+
 const MAIN_TASKS = {
   1:  { title:'全身强力排水', items:[
-        {id:'m1', name:'30min 高强度 HIIT (开合跳/高抬腿/开合蹲)', desc:'组间休息 15 秒', link: 'https://www.youtube.com/watch?v=ml6cT4AZdqI'},
-        {id:'m2', name:'10min 腹肌核心 (卷腹/平板支撑)', desc:'', link: 'https://www.youtube.com/watch?v=2pLTnookVCA'} ] },
+        {id:'m1', name:'30min 高强度 HIIT (开合跳/高抬腿/开合蹲)', desc:'组间休息 15 秒', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'},
+        {id:'m2', name:'10min 腹肌核心 (卷腹/平板支撑)', desc:'', link: 'https://www.youtube.com/watch?v=Q-vuR4PJh2c'} ] },
   2:  { title:'腰腹与下肢撕裂', items:[
-        {id:'m1', name:'30min 核心+下肢 (深蹲跳/深蹲/弓步蹲)', desc:'4组×20次', link: 'https://www.youtube.com/watch?v=50kHFlq7gXw'},
-        {id:'m2', name:'15min 侧腹/马甲线', desc:'侧腹专项', link: 'https://www.youtube.com/watch?v=7v2sVz4Uvzg'} ] },
+        {id:'m1', name:'30min 核心+下肢 (深蹲跳/深蹲/弓步蹲)', desc:'4组×20次', link: 'https://www.youtube.com/watch?v=-CWPIgK4G-k'},
+        {id:'m2', name:'15min 侧腹/马甲线', desc:'侧腹专项', link: 'https://www.youtube.com/watch?v=Q-vuR4PJh2c'} ] },
   3:  { title:'高消耗有氧', items:[
-        {id:'m1', name:'40min 快慢交替跑/坡度快走', desc:'心率保持 130–150', link: 'https://www.bilibili.com/video/BV1Uv4y197vJ'},
+        {id:'m1', name:'40min 快慢交替跑/坡度快走', desc:'心率保持 130–150', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'},
         {id:'m2', name:'10min 全身拉伸', desc:'', link: 'https://www.youtube.com/watch?v=Z5X5VZbP2dc'} ] },
   4:  { title:'假胯宽与下肢极速消肿', items:[
-        {id:'m1', name:'30min 下肢塑形 (相扑深蹲/侧弓步/单腿硬拉)', desc:'', link: 'https://www.youtube.com/watch?v=1bZ5J2k8X7q'},
-        {id:'m2', name:'15min 腿部消水肿拉伸', desc:'', link: 'https://www.bilibili.com/video/BV1h44y1v7s4'} ] },
+        {id:'m1', name:'30min 下肢塑形 (相扑深蹲/侧弓步/单腿硬拉)', desc:'', link: 'https://www.youtube.com/watch?v=-CWPIgK4G-k'},
+        {id:'m2', name:'15min 腿部消水肿拉伸', desc:'', link: 'https://www.youtube.com/watch?v=4f28vsjBF14'} ] },
   5:  { title:'全身高强度代谢爆破', items:[
-        {id:'m1', name:'35min Tabata (波比跳/登山跑/V字提膝)', desc:'动20秒休10秒，8组×4轮', link: 'https://www.youtube.com/watch?v=52g0WghJq80'} ] },
+        {id:'m1', name:'35min Tabata (波比跳/登山跑/V字提膝)', desc:'动20秒休10秒，8组×4轮', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'} ] },
   6:  { title:'手臂与上肢紧致/提拉视线', items:[
-        {id:'m1', name:'20min 上肢 (俯卧撑/俯身飞鸟/哑铃)', desc:'', link: 'https://www.youtube.com/watch?v=P2d3l6e41b0'},
-        {id:'m2', name:'20min 极速有氧 (跳绳/开合跳)', desc:'', link: 'https://www.youtube.com/watch?v=cZq5f8s3m1k'} ] },
+        {id:'m1', name:'20min 上肢 (俯卧撑/俯身飞鸟/哑铃)', desc:'', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'},
+        {id:'m2', name:'20min 极速有氧 (跳绳/开合跳)', desc:'', link: 'https://www.youtube.com/watch?v=Q-vuR4PJh2c'} ] },
   7:  { title:'中途极限刷脂', items:[
-        {id:'m1', name:'45min 户外快走/有氧操', desc:'', link: 'https://www.bilibili.com/video/BV1p44y1v7a2'},
-        {id:'m2', name:'15min 下腹部抬腿', desc:'', link: 'https://www.youtube.com/watch?v=V6b8j2v4m5x'} ] },
+        {id:'m1', name:'45min 户外快走/有氧操', desc:'', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'},
+        {id:'m2', name:'15min 下腹部抬腿', desc:'', link: 'https://www.youtube.com/watch?v=Q-vuR4PJh2c'} ] },
   8:  { title:'下肢与腹部双重打击', items:[
-        {id:'m1', name:'30min 深蹲+平板支撑交替循环', desc:'', link: 'https://www.youtube.com/watch?v=q6d1f8s7m3c'},
-        {id:'m2', name:'15min 大腿内侧收紧拉伸', desc:'', link: 'https://www.youtube.com/watch?v=U3Fm3x_1v60'} ] },
+        {id:'m1', name:'30min 深蹲+平板支撑交替循环', desc:'', link: 'https://www.youtube.com/watch?v=-CWPIgK4G-k'},
+        {id:'m2', name:'15min 大腿内侧收紧拉伸', desc:'', link: 'https://www.youtube.com/watch?v=4f28vsjBF14'} ] },
   9:  { title:'核心肌群拉紧/收小腹', items:[
-        {id:'m1', name:'35min 腹部撕裂者 (俄罗斯转体/仰卧交替抬腿/平板攀岩)', desc:'', link: 'https://www.youtube.com/watch?v=2pLTnookVCA'},
-        {id:'m2', name:'10min 腿部泡沫轴', desc:'', link: 'https://www.bilibili.com/video/BV1g44y1Y744'} ] },
+        {id:'m1', name:'35min 腹部撕裂者 (俄罗斯转体/仰卧交替抬腿/平板攀岩)', desc:'', link: 'https://www.youtube.com/watch?v=Q-vuR4PJh2c'},
+        {id:'m2', name:'10min 腿部泡沫轴', desc:'', link: 'https://www.youtube.com/watch?v=Z5X5VZbP2dc'} ] },
   10: { title:'心肺爆发与去水肿', items:[
-        {id:'m1', name:'40min 高强度 Cardio (开合跳/波比跳/高抬腿/侧滑步)', desc:'每动作45秒休15秒', link: 'https://www.youtube.com/watch?v=ml6cT4AZdqI'} ] },
+        {id:'m1', name:'40min 高强度 Cardio (开合跳/波比跳/高抬腿/侧滑步)', desc:'每动作45秒休15秒', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'} ] },
   11: { title:'全身肌肉拉紧', items:[
-        {id:'m1', name:'30min 全身自重阻力 (深蹲/箭步蹲/俯卧撑/平板)', desc:'轮换', link: 'https://www.youtube.com/watch?v=50kHFlq7gXw'},
-        {id:'m2', name:'15min 臀部提拉 (臀桥/跪姿后踢腿)', desc:'', link: 'https://www.youtube.com/watch?v=8V7i12w2SW8'} ] },
+        {id:'m1', name:'30min 全身自重阻力 (深蹲/箭步蹲/俯卧撑/平板)', desc:'轮换', link: 'https://www.youtube.com/watch?v=-CWPIgK4G-k'},
+        {id:'m2', name:'15min 臀部提拉 (臀桥/跪姿后踢腿)', desc:'', link: 'https://www.youtube.com/watch?v=r05uZp3cz4U'} ] },
   12: { title:'冲刺期腿部矫正重塑', items:[
-        {id:'m1', name:'20min 假胯宽收紧 (蚌式/臀桥/侧卧抬腿加倍)', desc:'加倍量', link: 'https://www.youtube.com/watch?v=8V7i12w2SW8'},
-        {id:'m2', name:'25min 高消耗 Cardio', desc:'', link: 'https://www.bilibili.com/video/BV1Uv4y197vJ'} ] },
+        {id:'m1', name:'20min 假胯宽收紧 (蚌式/臀桥/侧卧抬腿加倍)', desc:'加倍量', link: 'https://www.youtube.com/watch?v=r05uZp3cz4U'},
+        {id:'m2', name:'25min 高消耗 Cardio', desc:'', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'} ] },
   13: { title:'极限糖原排空', items:[
-        {id:'m1', name:'40min 不间断有氧操/快走', desc:'', link: 'https://www.bilibili.com/video/BV1p44y1v7a2'},
-        {id:'m2', name:'10min 腹肌冲刺 (V字卷腹/百次呼吸)', desc:'', link: 'https://www.youtube.com/watch?v=2pLTnookVCA'} ] },
+        {id:'m1', name:'40min 不间断有氧操/快走', desc:'', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'},
+        {id:'m2', name:'10min 腹肌冲刺 (V字卷腹/百次呼吸)', desc:'', link: 'https://www.youtube.com/watch?v=Q-vuR4PJh2c'} ] },
   14: { title:'皮下脱水与全身塑形', items:[
-        {id:'m1', name:'35min 全身 HIIT 冲刺', desc:'', link: 'https://www.youtube.com/watch?v=ml6cT4AZdqI'},
+        {id:'m1', name:'35min 全身 HIIT 冲刺', desc:'', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'},
         {id:'m2', name:'15min 全身深层筋膜拉伸', desc:'为最后一天脱水准备', link: 'https://www.youtube.com/watch?v=Z5X5VZbP2dc'} ] },
   15: { title:'终极视觉效果呈现', items:[
-        {id:'m1', name:'45min 坡度快走', desc:'', link: 'https://www.bilibili.com/video/BV1Uv4y197vJ'},
-        {id:'m2', name:'15min 假胯宽及大腿外侧彻底松解', desc:'排空皮下残余水肿', link: 'https://www.bilibili.com/video/BV1g44y1Y744'} ] },
+        {id:'m1', name:'45min 坡度快走', desc:'', link: 'https://www.youtube.com/watch?v=c01hlF_EdRk'},
+        {id:'m2', name:'15min 假胯宽及大腿外侧彻底松解', desc:'排空皮下残余水肿', link: 'https://www.youtube.com/watch?v=Z5X5VZbP2dc'} ] },
 };
-
 /* ---------- 状态与分日持久化 ---------- */
 function todayKey(){ const d=new Date(); return d.toISOString().slice(0,10); }
 function defaultState(){ return { day:1, days: {}, lastDate: todayKey() }; }
